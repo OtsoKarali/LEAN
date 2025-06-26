@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import MarketSentiment from '@/components/MarketSentiment'
 
 export default function Dashboard() {
   const [portfolioData, setPortfolioData] = useState(null)
@@ -81,7 +82,7 @@ export default function Dashboard() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           <Card>
             <CardHeader>
               <CardTitle>Portfolio Beta</CardTitle>
@@ -105,6 +106,10 @@ export default function Dashboard() {
               </div>
             </CardContent>
           </Card>
+
+          <div className="md:col-span-1">
+            <MarketSentiment />
+          </div>
         </div>
 
         <Card>
